@@ -1,0 +1,21 @@
+import "./styles.css";
+import React from 'react';
+import { Image, Card, Container, Row, Col, Button } from "react-bootstrap";
+
+  
+function BottomCards() {
+  return (
+
+  );
+}
+  
+export default BottomCards;
+
+      <Hero>
+        <Hero.Image>
+          <Hero.Text>
+          <h1>I am John Doe</h1>
+          <p>And I'm a Photographer</p>
+          </Hero.Text>
+        </Hero.Image>
+      </Hero>

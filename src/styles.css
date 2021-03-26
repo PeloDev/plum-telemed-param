@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "MyriadPro";
+  src: local("MyriadPro"), url(./fonts/MyriadProRegular.ttf) format("truetype");
+}
+
+.App {
+  /*font-family: Myriad Pro;*/
+  color: #000000;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+h6 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 10px;
+}
+
+.card {
+  border-radius: 10% !important;
+  background-color: #d3d3d3 !important;
+  text-align: center !important;
+}
+
+.card p {
+  text-align: center;
+}
