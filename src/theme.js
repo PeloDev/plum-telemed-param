@@ -8,11 +8,11 @@ const theme = extendTheme({
     background: "#0047AB"
   },
   components: {
-    // Text: {
-    //   baseStyle: {
-    //     fontFamily: "Mulish"
-    //   }
-    // }
+    Text: {
+      baseStyle: {
+        fontFamily: "Open Sans"
+      }
+    }
   }
 });
 
