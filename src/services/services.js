@@ -4,17 +4,13 @@ import { Image, Card, Container, Row, Col, Button } from "react-bootstrap";
 import line from "../services/images/Asset 24@150x.png";
 //main picture
 import mainpic from "../services/images/Asset 112100.png";
+import PageTitle from "../components/pagetitle";
 
 function ServicesPage() {
   return (
     <div>
       <Container className="mt-5">
-        <h3>OUR SERVICES</h3>
-        <Image
-          src={line}
-          height="5"
-          style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}
-        />
+        <PageTitle text="our services" />
         <Row className="mt-4">
           <Col lg={6} className="p-0">
             <Card>

@@ -3,17 +3,14 @@ import {
   Box,
   Button,
   Center,
-  Flex,
   Image,
-  Spacer,
   Text
 } from "@chakra-ui/react";
-import { Row, Col } from "react-bootstrap";
 import RoundInput from "../components/roundInput";
-import line from "../images/line/Asset 24@150x.png";
 import slide5 from "../welcome/images/Asset 116100.png";
 
 import Footer from '../footer/footer';
+import PageTitle from "../components/pagetitle";
 function Login() {
   const [form, updateForm] = useState({
     countryCode: { label: "Country Code", value: "", validator: "" },
@@ -55,20 +52,7 @@ function Login() {
           <h3>Login with PlumTelemed and avail great membership plans!!!</h3>
         </Box>
       </Box>
-      <Row style={{ margin: "36px 0px" }}>
-        <Col className="center">
-          <h3 style={{ textAlign: "center" }}>LOGIN</h3>
-          <Image
-            src={line}
-            height="5"
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}
-          />
-        </Col>
-      </Row>
+      <PageTitle text="login" />
       <Box minW="320px" margin="2% 0px" pb="80px">
         <Box
           backgroundColor="#DDD"
@@ -115,7 +99,7 @@ function Login() {
                 px="36px"
                 borderRadius="48px"
                 textAlign="center"
-                bg="#FF0000"
+                bg="primary"
                 border="1px solid #E33C28"
                 color="white"
                 _hover={{ bg: "E74032" }}
@@ -132,7 +116,7 @@ function Login() {
                 px="36px"
                 borderRadius="48px"
                 textAlign="center"
-                bg="#FF0000"
+                bg="primary"
                 border="1px solid #E33C28"
                 color="white"
                 _hover={{ bg: "E74032" }}

@@ -26,7 +26,7 @@ function BottomCards() {
                 <Card.Title className="mb-1">Heart Disease</Card.Title>
                 <Image
                   src={line}
-                  height="5"
+                  height="5px"
                   style={{
                     display: "block",
                     marginLeft: "auto",
@@ -52,7 +52,7 @@ function BottomCards() {
                 <Card.Title className="mb-1">Eye Health</Card.Title>
                 <Image
                   src={line}
-                  height="5"
+                  height="5px"
                   style={{
                     display: "block",
                     marginLeft: "auto",
@@ -78,7 +78,7 @@ function BottomCards() {
                 <Card.Title className="mb-1">Pregnancy</Card.Title>
                 <Image
                   src={line}
-                  height="5"
+                  height="5px"
                   style={{
                     display: "block",
                     marginLeft: "auto",
