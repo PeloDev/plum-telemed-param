@@ -7,7 +7,7 @@ import {
   Spacer,
   Text
 } from "@chakra-ui/react";
-import slide5 from "../welcome/images/Asset 116100.png";
+import slide6 from "../welcome/images/Asset 117100.png";
 import patientIcon from "../images/icons/Asset 30@150x.png";
 import healthcareIcon from "../images/icons/Asset 92@150x.png";
 import Footer from '../footer/footer';
@@ -17,7 +17,7 @@ import PageBanner from "../components/pagebanner";
 function SignUp() {
   return (
     <>
-      <PageBanner text="Sign up with PlumTelemed and avail great membership plans!!!" image={slide5} />
+      <PageBanner text="Sign up with PlumTelemed and avail great membership plans!!!" image={slide6} />
       <PageTitle text="sign up" />
       <Center textAlign="center" my="18px">
             <Text fontWeight={500} fontSize="20px">

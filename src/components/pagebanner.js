@@ -9,11 +9,16 @@ export default function PageBanner(props) {
                 top="50%"
                 left="50%"
                 transform="translate(-50%, -50%)"
-                backgroundColor="rgba(255,255,255,0.6)"
-                borderRadius={48}
-                padding="18px 72px"
-            >
-                <Text fontSize="1.75rem" fontWeight={500} textAlign="center">{props.text}</Text>
+                padding="18px 8%"
+                w="100%">
+                <Box
+                    backgroundColor="rgba(255,255,255,0.6)"
+                    borderRadius={48}
+                    p={2}
+                    textAlign="center"
+                >
+                    <Text fontSize="24px" fontWeight={500}>{props.text}</Text>
+                </Box>
             </Box>
         </Box>
     );
