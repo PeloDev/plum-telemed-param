@@ -1,19 +1,17 @@
 import React from "react";
 import {
   Box,
-  Button,
   Center,
   Flex,
   Image,
   Spacer,
   Text
 } from "@chakra-ui/react";
-import { Row, Col } from "react-bootstrap";
-import line from "../images/line/Asset 24@150x.png";
 import slide5 from "../welcome/images/Asset 116100.png";
 import patientIcon from "../images/icons/Asset 30@150x.png";
 import healthcareIcon from "../images/icons/Asset 92@150x.png";
 import Footer from '../footer/footer';
+import PageTitle from "../components/pagetitle";
 
 function SignUp() {
   return (
@@ -32,25 +30,12 @@ function SignUp() {
           <h3>Sign up with PlumTelemed and avail great membership plans!!!</h3>
         </Box>
       </Box>
-      <Row style={{ margiTop: "12px" }}>
-        <Col className="center">
-          <h3 style={{ textAlign: "center" }}>SIGN UP</h3>
-          <Image
-            src={line}
-            height="5"
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}
-          />
-          <Center textAlign="center" my="18px">
+      <PageTitle text="sign up" />
+      <Center textAlign="center" my="18px">
             <Text fontWeight={500} fontSize="20px">
               ARE YOU?
             </Text>
           </Center>
-        </Col>
-      </Row>
       <Flex pb="36px">
         <Spacer />
         <Box

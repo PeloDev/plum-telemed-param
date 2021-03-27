@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Button, Center, Flex, Image, Text } from "@chakra-ui/react";
-import { Row, Col } from "react-bootstrap";
 import RoundInput from "../components/roundInput";
-import line from "../images/line/Asset 24@150x.png";
 import slide4 from "../welcome/images/Asset 115100.png";
+import PageTitle from "../components/pagetitle";
 import Footer from '../footer/footer';
 
 function Contact() {
@@ -25,20 +24,7 @@ function Contact() {
           <h3>"We will be happy to hear from you"</h3>
         </Box>
       </Box>
-      <Row style={{ margin: "36px 0px" }}>
-        <Col className="center">
-          <h3 style={{ textAlign: "center" }}>CONTACT US</h3>
-          <Image
-            src={line}
-            height="5"
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}
-          />
-        </Col>
-      </Row>
+      <PageTitle text="contact us" />
       <Box margin="36px 0px">
         <Box
           backgroundColor="#DDD"
@@ -122,8 +108,8 @@ function Contact() {
               flex={1}
               borderRadius="48px"
               textAlign="center"
-              bg="#E33C28"
-              border="1px solid #E33C28"
+              bg="primary"
+              border="1px solid primary"
               color="white"
             >
               Send Message
