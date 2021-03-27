@@ -18,6 +18,8 @@ function Login() {
     phone: { label: "Mobile Number", value: "", validator: "" }
   });
 
+  const [formIsValid, updateFormIsValid] = useState(false);
+
   function handleFormChange(event) {
     const { name, value } = event.target;
     let newValue = value;
@@ -26,14 +28,29 @@ function Login() {
     }
 
     let validator = "";
-    if (value.length === 0) {
+    if (value.length === 0 || value.replace("+", "").length === 0) {
       validator = `Please enter ${form[name].label}`;
     }
 
-    updateForm((previousValue) => ({
-      ...previousValue,
-      [name]: { ...previousValue[name], value: newValue, validator: validator }
-    }));
+
+    updateForm((previousForm) => {
+      const newForm = {
+        ...previousForm,
+        [name]: {
+          ...previousForm[name],
+          value: newValue,
+          validator: validator
+        }
+      };
+      let isValid = true;
+      Object.keys(newForm).forEach(key => {
+        if (newForm[key].validator.length > 0) {
+          isValid = false;
+        }
+      });
+      updateFormIsValid(isValid);
+      return newForm;
+    });
   }
 
   return (
@@ -62,7 +79,8 @@ function Login() {
               name="countryCode"
               value={form.countryCode.value}
               placeholder="(+27)"
-              onChange={handleFormChange}
+              validator={form.countryCode.validator}
+              onChange={(e) => handleFormChange(e)}
             />
           </Box>
           <Text mt="12px" fontWeight={500} fontSize="18px" mx="12px" flex={1}>
@@ -74,7 +92,8 @@ function Login() {
               value={form.phone.value}
               placeholder="Enter phone number"
               type="tel"
-              onChange={handleFormChange}
+              validator={form.phone.validator}
+              onChange={(e) => handleFormChange(e)}
             />
           </Box>
           <Box w="100%" textAlign="center" mt="36px" mb="72px" px="12px">
@@ -87,9 +106,12 @@ function Login() {
                 borderRadius="48px"
                 textAlign="center"
                 bg="primary"
-                border="1px solid #E33C28"
+                border="1px solid secondary"
                 color="white"
-                _hover={{ bg: "E74032" }}
+                _hover={{ opacity: 0.8 }}
+                _active={{ opacity: 0.7 }}
+                _focus={{}}
+                disabled={!formIsValid}
               >
                 Login with OTP
               </Button>
@@ -104,9 +126,12 @@ function Login() {
                 borderRadius="48px"
                 textAlign="center"
                 bg="primary"
-                border="1px solid #E33C28"
+                border="1px solid secondary"
                 color="white"
-                _hover={{ bg: "E74032" }}
+                _hover={{ opacity: 0.8 }}
+                _active={{ opacity: 0.7 }}
+                _focus={{}}
+                disabled={!formIsValid}
               >
                 Login with Password
               </Button>
