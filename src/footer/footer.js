@@ -1,12 +1,13 @@
 import React from "react";
 import {
-  Image,
+  //Image,
   FormControl,
   Button,
   InputGroup,
   Form,
   ProgressBar
 } from "react-bootstrap";
+import { Image, Text } from "@chakra-ui/react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 //logo
 import logo from "../images/logo/Asset 52@150x.png";
@@ -38,12 +39,12 @@ export default function Footer() {
           </MDBCol>
 
           <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
-            <Image className="mr-2" src={link3} height="40" rounded />
-            <Image className="mr-2" src={link2} height="40" rounded />
-            <Image className="mr-2" src={link3} height="40" rounded />
-            <Image className="mr-2" src={link4} height="40" rounded />
+            <Image mr="2" display="inline-block" src={link3} width="40px" height="40px" rounded />
+            <Image mr="2" display="inline-block" src={link2} width="40px" height="40px" rounded />
+            <Image mr="2" display="inline-block" src={link3} width="40px" height="40px" rounded />
+            <Image mr="2" display="inline-block" src={link4} width="40px" height="40px" rounded />
             <h5 className="text-uppercase mt-4 mb-0">
-              <Image src={link1} height="20" rounded /> Quick Links
+              <Image src={link1} display="inline-block" height="20px" rounded /><Text display="inline-block" fontSize="1.25rem" mx="6px" fontWeight={500}> Quick Links </Text>
             </h5>
             <div className="mb-4 mt-2">
               <ProgressBar
@@ -105,11 +106,11 @@ export default function Footer() {
           <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
             <Image
               src={link10}
-              height="40"
+              height="40px"
               style={{ marginRight: "0" }}
               className="mr=0"
             />
-            <h5 className="text-uppercase mb-0 mt-4">Newsletter</h5>
+            <Text display="inline-block" fontSize="1.25rem" h="24px" lineHeight="1.2" fontWeight={500} className="text-uppercase mb-0 mt-4">Newsletter</Text>
             <div className="mb-4 mt-2">
               <ProgressBar
                 variant="danger"

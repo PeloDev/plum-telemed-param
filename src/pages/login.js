@@ -11,6 +11,7 @@ import slide5 from "../welcome/images/Asset 116100.png";
 
 import Footer from '../footer/footer';
 import PageTitle from "../components/pagetitle";
+import PageBanner from "../components/pagebanner";
 function Login() {
   const [form, updateForm] = useState({
     countryCode: { label: "Country Code", value: "", validator: "" },
@@ -37,21 +38,7 @@ function Login() {
 
   return (
     <>
-      <Box position="relative" textAlign="center">
-        <Image width="100%" src={slide5} alt="login-banner" />
-        <Box
-          min="80%"
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          backgroundColor="rgba(255,255,255,0.6)"
-          borderRadius={48}
-          padding="18px 72px"
-        >
-          <h3>Login with PlumTelemed and avail great membership plans!!!</h3>
-        </Box>
-      </Box>
+      <PageBanner text="Login with PlumTelemed and avail great membership plans!!!" image={slide5} />
       <PageTitle text="login" />
       <Box minW="320px" margin="2% 0px" pb="80px">
         <Box

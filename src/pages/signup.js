@@ -12,24 +12,12 @@ import patientIcon from "../images/icons/Asset 30@150x.png";
 import healthcareIcon from "../images/icons/Asset 92@150x.png";
 import Footer from '../footer/footer';
 import PageTitle from "../components/pagetitle";
+import PageBanner from "../components/pagebanner";
 
 function SignUp() {
   return (
     <>
-      <Box position="relative" textAlign="center">
-        <Image width="100%" src={slide5} alt="login-banner" />
-        <Box
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          backgroundColor="rgba(255,255,255,0.6)"
-          borderRadius={48}
-          padding="18px 72px"
-        >
-          <h3>Sign up with PlumTelemed and avail great membership plans!!!</h3>
-        </Box>
-      </Box>
+      <PageBanner text="Sign up with PlumTelemed and avail great membership plans!!!" image={slide5} />
       <PageTitle text="sign up" />
       <Center textAlign="center" my="18px">
             <Text fontWeight={500} fontSize="20px">

@@ -4,26 +4,14 @@ import RoundInput from "../components/roundInput";
 import slide4 from "../welcome/images/Asset 115100.png";
 import PageTitle from "../components/pagetitle";
 import Footer from '../footer/footer';
+import PageBanner from "../components/pagebanner";
 
 function Contact() {
   const tempCaptcha = "d8AwB";
 
   return (
     <>
-      <Box position="relative" textAlign="center">
-        <Image width="100%" src={slide4} alt="contact-us-banner" />
-        <Box
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          backgroundColor="rgba(255,255,255,0.6)"
-          borderRadius={48}
-          padding="18px 72px"
-        >
-          <h3>"We will be happy to hear from you"</h3>
-        </Box>
-      </Box>
+      <PageBanner text='"We will be happy to hear from you"' image={slide4} />
       <PageTitle text="contact us" />
       <Box margin="36px 0px">
         <Box
