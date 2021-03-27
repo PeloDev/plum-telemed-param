@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import { Text } from "@chakra-ui/react";
 
 import slide1 from '../welcome/images/Asset 111100.png';
 import slide2 from '../welcome/images/Asset 113100.png';
@@ -22,7 +23,7 @@ function Slides() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>First slide label</Text>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -34,7 +35,7 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>Second slide label</Text>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -46,7 +47,7 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>Third slide label</Text>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -58,7 +59,7 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <h3>Fourth slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>Fourth slide label</Text>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -70,7 +71,7 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <h3>Firth slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>Firth slide label</Text>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -82,7 +83,7 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <h3>Sixth slide label</h3>
+            <Text fontSize="1.75rem" fontWeight={500}>Sixth slide label</Text>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
