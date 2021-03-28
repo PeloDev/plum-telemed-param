@@ -8,7 +8,27 @@ import {
   NavBtnLink,
 } from './NavbarElements';
 
-import { Box, Button, Center, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  Spacer,
+  Text
+} from "@chakra-ui/react";
 import logo from "../../images/logo/Asset 52@150x.png";
 import menuItems from "./menuitems";
 import { useHistory } from 'react-router';
@@ -60,7 +80,73 @@ const Navbar = () => {
       </Box>
       {menuOpen.map((item, itemIdx) => (
         <Box flex={item.isButton ? 0.65 : 1}>
-          <Menu isOpen={item.isOpen}>
+          <Popover trigger="hover">
+            <PopoverTrigger>
+              {
+                item.isButton ?
+                  <Button
+                    h="40px"
+                    p={4}
+                    borderRadius={18}
+                    backgroundColor={"secondary"}
+                    _hover={{ opacity: 0.7 }}
+                    onClick={() => { history.replace(`/${item.route}`) }}
+                    onMouseEnter={() => { openMenu(itemIdx, true) }}
+                    onMouseLeave={() => { openMenu(itemIdx, false) }}
+                  >
+                    <Text
+                      fontSize="15px"
+                      fontWeight={600}
+                      color={"white"}
+                    >
+                      {item.label.toString().toUpperCase()}
+                    </Text>
+                  </Button>
+                  :
+                  <Box
+                    h="40px"
+                    p={1}
+                    borderRadius={12}
+                    backgroundColor={"transparent"}
+                    _hover={{ cursor: "pointer", textDecoration: "underline" }}
+                    onClick={() => { history.replace(`/${item.route}`) }}
+                    onMouseEnter={() => { openMenu(itemIdx, true) }}
+                    onMouseLeave={() => { openMenu(itemIdx, false) }}>
+                    <Text
+                      fontSize="15px"
+                      fontWeight={500}
+                      color={"black"}
+                    >
+                      {item.label.toString().toUpperCase()}
+                    </Text>
+                  </Box>
+              }
+            </PopoverTrigger>
+            {
+              item.options.length > 0 &&
+              <PopoverContent
+                backgroundColor="rgba(255,255,255,0.2)"
+                border="none"
+                _focus={{ border: "none" }}
+              >
+                <PopoverArrow />
+                <PopoverBody key={item.key}>
+                  {item.options.map(opt => (
+                    <Button
+                      w="100%"
+                      my={1}
+                      bg="white"
+                      fontWeight="400"
+                      _hover={{ bg: "secondary" }}
+                      _focus={{ border: "none" }}
+                      onClick={() => { history.replace(`/${item.route}`) }}
+                    >{opt}</Button>
+                  ))}
+                </PopoverBody>
+              </PopoverContent>
+            }
+          </Popover>
+          {/* <Menu isOpen={item.isOpen}>
             <MenuButton
               as={item.isButton ? Button : Box}
               key={item.key}
@@ -68,7 +154,7 @@ const Navbar = () => {
               p={item.isButton ? 4 : 1}
               borderRadius={item.isButton ? 18 : 12}
               backgroundColor={item.isButton ? "secondary" : "transparent"}
-              _hover={item.isButton ? { opacity: 0.7 } : {  cursor: "pointer", textDecoration: "underline" }}
+              _hover={item.isButton ? { opacity: 0.7 } : { cursor: "pointer", textDecoration: "underline" }}
               onClick={() => { history.replace(`/${item.route}`) }}
               onMouseEnter={() => { openMenu(itemIdx, true) }}
               onMouseLeave={() => { openMenu(itemIdx, false) }}
@@ -89,7 +175,7 @@ const Navbar = () => {
                 ))}
               </MenuList>
             }
-          </Menu>
+          </Menu> */}
         </Box>
       ))}
       <SignUpDialog />
