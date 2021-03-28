@@ -1,15 +1,15 @@
-//import "./styles.css";
+
 import React from 'react';
 import { Image, Card, Container, Row, Col, Button } from "react-bootstrap";
-
 import Footer from '../footer/footer';
 
   
-function Features() {
+function FeatureContent() {
   return (
-  
-  <Footer />
+    <div>
+
+    </div>
   );
 }
   
-export default Features;
+export default FeatureContent;
