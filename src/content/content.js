@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Image, Card, Container, Row, Col, ListGroup, Button } from "react-bootstrap";
+import { Card, Container, Row, Col, ListGroup } from "react-bootstrap";
+import { Box, Button, Image } from "@chakra-ui/react";
 import med from '../content/images/Asset 112100.png';
 import icon1 from '../content/images/icons/Asset 33@150x.png';
 import icon2 from '../content/images/icons/Asset 34@150x.png';
@@ -8,6 +9,7 @@ import icon3 from '../content/images/icons/Asset 35@150x.png';
 import icon4 from '../content/images/icons/Asset 36@150x.png';
 import logo from '../content/images/Asset 24@150x.png'; // gives image path
 import PageTitle from "../components/pagetitle";
+import CustomCircularProgress from '../components/circlularprogress';
 
 
 function App() {
@@ -18,15 +20,15 @@ function App() {
         <p>It is a long established fact that a reader will</p>
         <Row>
           <Col lg={6} className="mb-3 text-left" >
-            <div className="mb-3 "><Image src={icon2} rounded width="50" />   Highly Qualified Physicians</div>
-            <div className="mb-3 "><Image src={icon1} rounded width="50" />   Telemedicine Solutions</div>
-            <div className="mb-3 "><Image src={icon4} rounded width="50" />   Medical Specialties</div>
-            <div className="mb-3 "><Image src={icon3} rounded width="50" />   Recent Partnerships</div>
+            <div className="mb-3 "><CustomCircularProgress total={100} size="50px" />   Highly Qualified Physicians</div>
+            <div className="mb-3 "><CustomCircularProgress total={10} size="50px" />   Telemedicine Solutions</div>
+            <div className="mb-3 "><CustomCircularProgress total={30} size="50px" />   Medical Specialties</div>
+            <div className="mb-3 "><CustomCircularProgress total={25} size="50px" />  Recent Partnerships</div>
 
           </Col>
           <Col lg={6} className="ml-0 p-0">
             <Card>
-              <Image src={med} height="350" rounded />
+              <Image objectFit="cover" src={med} height="350" rounded />
             </Card>
           </Col>
 
@@ -52,7 +54,7 @@ function App() {
           </Col>
           <Col lg={6} className="p-0">
             <Card>
-              <Image src={med} height="350" rounded />
+              <Image objectFit="cover" src={med} height="350" rounded />
             </Card>
           </Col>
         </Row>
@@ -62,7 +64,7 @@ function App() {
         <Row className="mt-4">
           <Col lg={6} className="p-0">
             <Card>
-              <Image src={med} height="350" rounded />
+              <Image objectFit="cover" src={med} height="350" rounded />
             </Card>
           </Col>
           <Col lg={6} className="text-left">
@@ -72,7 +74,18 @@ function App() {
               <ListGroup.Item>What are the limitations of telemedicine?</ListGroup.Item>
               <ListGroup.Item>What are the benefits of telemedicine versus traditional “in-person” doctor’s appointment?</ListGroup.Item>
             </ListGroup>
-            <Button variant="primary">Primary</Button>
+            <Button
+              ml="4"
+              mt="3"
+              bg="secondary"
+              color="white"
+              fontWeight="500"
+              _hover={{ opacity: 0.8 }}
+              _active={{ opacity: 0.7 }}
+              _focus={{}}
+            >
+              More FAQ's
+            </Button>
           </Col>
         </Row>
       </Container>

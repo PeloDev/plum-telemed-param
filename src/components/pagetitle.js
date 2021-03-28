@@ -8,13 +8,13 @@ export default function PageTitle(props) {
     return (
         <Box>
             <Row style={{ margin: "36px 0px" }}>
-                <Col className="center">
-                    <Text textAlign="center" fontSize={ props.fontSize ?? "1.75rem" }>{props.text.toString().toUpperCase()}</Text>
+                <Col className={props.align ?? "center"} style={{paddingLeft: 0, paddingRight: 0}}>
+                    <Text textAlign={props.align ?? "center"} fontSize={ props.fontSize ?? "1.75rem" }>{props.text.toString().toUpperCase()}</Text>
                     <Image
                         src={line}
                         height="5px"
                         display="block"
-                        mx="auto"
+                        mx={props.align === "left" ? 0 : "auto"}
                         mt="3px"
                     />
                 </Col>

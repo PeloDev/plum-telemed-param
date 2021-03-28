@@ -12,10 +12,15 @@ import {
 //import {Jumbotron, Button, Row, Col, Image, Card} from 'react-bootstrap';
 //banner
 import bannerimg from "../images/banner/features.png";
+import PageBanner from "../components/pagebanner";
+
+const text = "\" Give your practice an instant web presence\" ";
 
 function Banner() {
   return (
-    <div>
+    <>
+      <PageBanner text={text} image={bannerimg} />
+      {/*<div>
       <Box position="relative" textAlign="center">
         <Image width="100%" src={bannerimg} alt="login-banner" />
         <Box
@@ -31,7 +36,8 @@ function Banner() {
           <h3>" Give your practice an instant web presence"</h3>
         </Box>
       </Box>
-    </div>
+    </div> */}
+    </>
   );
 }
 

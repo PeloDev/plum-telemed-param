@@ -16,7 +16,7 @@ const menuItems = [
     getMenuItem({key: 3,route: "features", label: "Features"}),
     getMenuItem({key: 4,route: "contactus", label: "Contact Us"}),
     getMenuItem({key: 5,route: "login", label: "Log In", isButton: true}),
-    getMenuItem({key: 6,route: "signup", label: "Sign Up", isButton: true}),
+    //getMenuItem({key: 6,route: "signup", label: "Sign Up", isButton: true}),
 ];
 
 export default menuItems;

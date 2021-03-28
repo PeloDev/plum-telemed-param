@@ -141,7 +141,7 @@ export default function Footer() {
                     aria-describedby="basic-addon2"
                   />
                   <InputGroup.Append>
-                    <Button varient="danger" style={{backgroundColor: "#FF0000", borderColor: "#FF0000"}} rounded>
+                    <Button varient="danger" style={{ backgroundColor: "#FF0000", borderColor: "#FF0000" }} rounded>
                       Submit
                 </Button>
                   </InputGroup.Append>
@@ -149,13 +149,24 @@ export default function Footer() {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-
           <div
+            className="p-3"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+          >
+            <MDBContainer >
+              <MDBRow>
+                <MDBCol className="text-bold" style={{ fontWeight: '500px' }}> PRIVACY | TERMS OF USE</MDBCol>
+                <MDBCol className="text-right" style={{ fontWeight: '50px' }}>Copyright  &copy; {new Date().getFullYear()}. All Rights Reserved. PlumTelemed</MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </div>
+
+          {/* <div
             className="text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
             &copy; {new Date().getFullYear()} Copyright:{" "}
-          </div>
+          </div> */}
         </MDBFooter>
       </Box>
     </>

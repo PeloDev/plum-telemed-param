@@ -1,7 +1,7 @@
 
 import React from 'react';
-import {Carousel} from 'react-bootstrap';
-import { Text } from "@chakra-ui/react";
+import { Carousel } from 'react-bootstrap';
+import { Box, Text } from "@chakra-ui/react";
 
 import slide1 from '../welcome/images/Asset 111100.png';
 import slide2 from '../welcome/images/Asset 113100.png';
@@ -11,11 +11,11 @@ import slide5 from '../welcome/images/Asset 116100.png';
 import slide6 from '../welcome/images/Asset 117100.png';
 
 
-  
+
 function Slides() {
   return (
     <div>
-      <Carousel>
+      <Carousel style={{color: "black"}}>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -23,8 +23,8 @@ function Slides() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>First slide label</Text>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <Text fontSize="1.75rem" color="black" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">A truely affordable and customizable solution.</Text>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -35,8 +35,8 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>Second slide label</Text>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <Text fontSize="1.75rem" color="black" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">Consultation everywhere. We are providing better care.</Text>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,8 +47,8 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>Third slide label</Text>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <Text fontSize="1.75rem" color="black" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">Give your practice an instant web presence.</Text>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -59,11 +59,11 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>Fourth slide label</Text>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <Text fontSize="1.75rem" color="black" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">Increase profitability. Increase patient care.</Text>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <img
             className="d-block w-100"
             src={slide5}
@@ -71,10 +71,10 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>Firth slide label</Text>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <Text fontSize="1.75rem" color="white" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">A truely affordable and customizable solution.</Text>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -83,13 +83,13 @@ function Slides() {
           />
 
           <Carousel.Caption>
-            <Text fontSize="1.75rem" fontWeight={500}>Sixth slide label</Text>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <Text fontSize="1.75rem" color="black" fontWeight={500}>PlumTelemed <div />Save Time & Money</Text>
+            <Text color="black">A truely affordable and customizable solution.</Text>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>
   );
 }
-  
+
 export default Slides;

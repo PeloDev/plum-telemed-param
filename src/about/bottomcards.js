@@ -105,7 +105,7 @@ function BottomCards() {
             <Box w="100%" textAlign="center" mt="36px" mb="72px" px="12px">
               <Box display="inline-block flex" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"
@@ -122,7 +122,7 @@ function BottomCards() {
 
               <Box display="inline-block" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"
@@ -139,7 +139,7 @@ function BottomCards() {
 
               <Box display="inline-block" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"
@@ -166,7 +166,7 @@ function BottomCards() {
             <Box w="100%" textAlign="center" mt="36px" mb="72px" px="12px">
               <Box display="inline-block" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"
@@ -183,7 +183,7 @@ function BottomCards() {
 
               <Box display="inline-block" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"
@@ -200,7 +200,7 @@ function BottomCards() {
 
               <Box display="inline-block" my="12px" mx="28px">
                 <Button
-                  maxW="212px"
+                  w="212px"
                   h="36px"
                   pt="2px"
                   px="36px"

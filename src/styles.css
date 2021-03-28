@@ -20,6 +20,113 @@ h6 {
   text-align: center !important;
 }
 
+
 .card p {
   text-align: center;
 }
+
+vl {
+  border-left: 2px solid;
+  height: 260px;
+}
+
+.card :hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 10% !important;
+  }
+
+  .y-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  Box :hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 10% !important;
+  }
+
+  .carousel-caption {
+    left: 20%;
+    top: 30%;
+    text-align: left !important;
+    color: #000000 !important;
+
+}
+
+button {
+  -webkit-appearance: none;
+          appearance: none;
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+  -webkit-transition: all .5s ease;
+         filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+          border-radius: 18px;
+  background: rgb(0,71,171);
+  padding: 7px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 0px;
+  /*border: none;
+  background: rgb(0,71,171);
+  border-radius: 10%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 6px 30px;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: cursor;
+  color: #fff;
+  */
+}
+
+button:hover {
+  color: #FFFFFF;
+  background: red;
+  -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+@media only screen and (max-width: 576px) {
+   h3{
+          font-size: 1rem;
+  }
+}
+
+/*  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
+}
+*/
